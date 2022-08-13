@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/TileScenes/LongTile3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/TileScenes/MediumTile1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/TileScenes/SmallTile1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/TileScenes/SmallTile2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/TileScenes/LongTile1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/TileScenes/LongTile2.tscn" type="PackedScene" id=7]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 33, 40 )
+
+[node name="LongTile2" parent="StaticBody2D" instance=ExtResource( 7 )]
+position = Vector2( 56, 0 )
+
+[node name="LongTile3" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 112, -1 )
+
+[node name="MediumTile1" parent="StaticBody2D" instance=ExtResource( 3 )]
+position = Vector2( 168, -1 )
+
+[node name="SmallTile1" parent="StaticBody2D/MediumTile1" instance=ExtResource( 4 )]
+position = Vector2( 39, 0 )
+
+[node name="SmallTile2" parent="StaticBody2D/MediumTile1/SmallTile1" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 25, 16 )
