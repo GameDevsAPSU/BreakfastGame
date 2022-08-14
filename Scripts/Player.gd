@@ -8,7 +8,7 @@ var gravity : int = 800
 var vel : Vector2 = Vector2()
 var grounded : bool = false
 
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 
 func _ready():
 	pass # Replace with function body.
