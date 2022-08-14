@@ -42,3 +42,7 @@ func _physics_process(delta):
 
 func die ():
 	get_tree().reload_current_scene()
+
+#Restarts the Level if player falls off of the screen
+func _on_VisibilityNotifier2D_screen_exited():
+	get_tree().reload_current_scene()
