@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends KinematicBody2D
 
 export var speed : int = 100
 export var horizDist : int = 100
@@ -34,3 +34,4 @@ func move_to (current, to, step):
 		if new < to:
 			new = to
 	return new
+
